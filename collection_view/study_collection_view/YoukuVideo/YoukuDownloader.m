@@ -22,8 +22,6 @@
         NSURL* url = [NSURL URLWithString:escapedUrlString];
         NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
         [request setURL:url];
-//        [request setValue:@"bddb5a2f517b14e90b4f9b858cba42761362710463543" forHTTPHeaderField:@"access_token"];
-//        [request setValue:@"214770620000030628" forHTTPHeaderField:@"app_id"];
         
         NSURLConnection *connection=[[NSURLConnection alloc]initWithRequest:request delegate:self];
         

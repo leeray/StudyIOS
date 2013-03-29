@@ -14,7 +14,7 @@ struct TableArray{
     NSMutableArray __unsafe_unretained *tableArray;
 };
 
-@interface PhotoCollectionViewController : UICollectionViewController <YoukuGetterDelegate>{
+@interface PhotoCollectionViewController : UICollectionViewController <UICollectionViewDelegate, YoukuGetterDelegate>{
     struct TableArray categoryTableArray;
 }
 

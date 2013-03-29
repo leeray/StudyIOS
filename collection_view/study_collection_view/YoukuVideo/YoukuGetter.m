@@ -10,6 +10,7 @@
 #import "CategoryVideos.h"
 
 #define CLIENTID @"d68da6150f7d4460"
+#define CLIENTPID @""
 
 @implementation YoukuGetter
 @synthesize flag = _flag;

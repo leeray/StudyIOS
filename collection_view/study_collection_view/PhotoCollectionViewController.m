@@ -64,15 +64,21 @@
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"collectionView:cellForItemAtIndexPath:%d", [indexPath row]);
     PhotoCollectionViewCell *myCell = [collectionView
                                        dequeueReusableCellWithReuseIdentifier:@"photoCell"
                                        forIndexPath:indexPath];
+    CategoryVideos *categoryVideo = [categoryTableArray.tableArray objectAtIndex:[indexPath row]];
     
     
     UIImage *image;
-    int row = [indexPath row];
-    image = [UIImage imageNamed:self.photoImages[row]];
+    image = [UIImage imageNamed:[categoryVideo thumbnail]];
     myCell.imageView.image = image;
+    
+    UILabel *title = [[UILabel alloc]init];
+    title.text = [categoryVideo title];
+    myCell.nameLabel = title;
+    
     return myCell;
 }
 
@@ -85,11 +91,18 @@
 
 #pragma delegate YoukuGetterDelegate
 -(void) getCategoryVideosOK:(struct YoukuCategoryInfo)result{
+    
+    if(!categoryTableArray.tableArray){
+        categoryTableArray.tableArray = [[NSMutableArray alloc]init];
+    }
+    
     for (CategoryVideos *categoryVideo in result.youkuCategroyInfo){
         [categoryTableArray.tableArray addObject:categoryVideo];
     }
     
     NSLog(@"categoryTableArray.tableArray count():%d", [categoryTableArray.tableArray count]);
+    
+    [self.collectionView reloadData];
 }
 
 
