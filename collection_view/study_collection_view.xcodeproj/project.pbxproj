@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		23710AF81709607A008F6EA8 /* VideosLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 23710AF71709607A008F6EA8 /* VideosLayout.m */; };
 		23838E6617042A9700E1DD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6517042A9700E1DD31 /* UIKit.framework */; };
 		23838E6817042A9700E1DD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6717042A9700E1DD31 /* Foundation.framework */; };
 		23838E6A17042A9700E1DD31 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6917042A9700E1DD31 /* CoreGraphics.framework */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23710AF61709607A008F6EA8 /* VideosLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosLayout.h; sourceTree = "<group>"; };
+		23710AF71709607A008F6EA8 /* VideosLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosLayout.m; sourceTree = "<group>"; };
 		23838E6217042A9700E1DD31 /* study_collection_view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = study_collection_view.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23838E6517042A9700E1DD31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23838E6717042A9700E1DD31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -80,7 +83,6 @@
 		23838E5917042A9700E1DD31 = {
 			isa = PBXGroup;
 			children = (
-				23CDF5FF17056A3000B95763 /* QuartzCore.framework */,
 				23838E6B17042A9700E1DD31 /* study_collection_view */,
 				23838E6417042A9700E1DD31 /* Frameworks */,
 				23838E6317042A9700E1DD31 /* Products */,
@@ -98,6 +100,7 @@
 		23838E6417042A9700E1DD31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				23CDF5FF17056A3000B95763 /* QuartzCore.framework */,
 				23838E6517042A9700E1DD31 /* UIKit.framework */,
 				23838E6717042A9700E1DD31 /* Foundation.framework */,
 				23838E6917042A9700E1DD31 /* CoreGraphics.framework */,
@@ -142,6 +145,8 @@
 				23838E8A17042BB200E1DD31 /* PhotoCollectionViewController.m */,
 				23838E8C17042C2C00E1DD31 /* PhotoCollectionViewCell.h */,
 				23838E8D17042C2C00E1DD31 /* PhotoCollectionViewCell.m */,
+				23710AF61709607A008F6EA8 /* VideosLayout.h */,
+				23710AF71709607A008F6EA8 /* VideosLayout.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -247,6 +252,7 @@
 				23838E981704371500E1DD31 /* YoukuDownloader.m in Sources */,
 				23CDF5FD170547E000B95763 /* JASidePanelController.m in Sources */,
 				23CDF5FE170547E000B95763 /* UIViewController+JASidePanel.m in Sources */,
+				23710AF81709607A008F6EA8 /* VideosLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

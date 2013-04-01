@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PhotoCollectionViewController.h"
 
 @interface ControlMainAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) PhotoCollectionViewController *viewController;
 
 @end

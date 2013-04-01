@@ -15,6 +15,8 @@
 
 @implementation PhotoCollectionViewController
 
+@synthesize videosArray;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -29,21 +31,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-//    self.photoImages = [@[
-//                        @"IMG_1.JPG",
-//                        @"IMG_2.JPG",
-//                        @"IMG_3.JPG",
-//                        @"IMG_4.JPG",
-//                        @"IMG_5.JPG",
-//                        @"IMG_6.JPG",
-//                        @"IMG_7.JPG",
-//                        @"IMG_8.JPG",
-//                        @"IMG_9.JPG",
-//                        @"IMG_10.JPG",
-//                        @"90s-girl.jpg",
-//                        @"90s-girl-1.jpg",
-//                        @"90s-girl-2.jpg",
-//                        @"90s-girl-3.jpg"] mutableCopy];
     [self loadCategoryVideo:@"电影" genre:@"恐怖"];
 }
 
@@ -59,12 +46,20 @@
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
+   
+    NSLog(@"PhotoCollectionViewController numberOfSectionsInCollectionView");
     return 1;
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    NSLog(@"PhotoCollectionViewController collectionView numberOfItemsInSecion categoryTableArray.tableArray.count:%d   videosArray.count:%d", [categoryTableArray.tableArray count], [videosArray count]);
+    return [videosArray count];
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"collectionView:cellForItemAtIndexPath:%d", [indexPath row]);
+    NSLog(@"PhotoCollectionViewController collectionView:cellForItemAtIndexPath:%d", [indexPath row]);
     PhotoCollectionViewCell *myCell = [collectionView
                                        dequeueReusableCellWithReuseIdentifier:@"photoCell"
                                        forIndexPath:indexPath];
@@ -72,12 +67,13 @@
     
     
     UIImage *image;
-    image = [UIImage imageNamed:[categoryVideo thumbnail]];
+    image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
     myCell.imageView.image = image;
     
-    UILabel *title = [[UILabel alloc]init];
-    title.text = [categoryVideo title];
-    myCell.nameLabel = title;
+    myCell.nameLabel.numberOfLines = 0;
+    myCell.nameLabel.text = [categoryVideo title];
+    
+    NSLog(@"thumbnail:%@   title:%@", [categoryVideo thumbnail], [categoryVideo title]);
     
     return myCell;
 }
@@ -91,13 +87,16 @@
 
 #pragma delegate YoukuGetterDelegate
 -(void) getCategoryVideosOK:(struct YoukuCategoryInfo)result{
-    
     if(!categoryTableArray.tableArray){
         categoryTableArray.tableArray = [[NSMutableArray alloc]init];
+    }
+    if(!videosArray){
+        videosArray = [[NSMutableArray alloc]init];
     }
     
     for (CategoryVideos *categoryVideo in result.youkuCategroyInfo){
         [categoryTableArray.tableArray addObject:categoryVideo];
+        [videosArray addObject:categoryVideo];
     }
     
     NSLog(@"categoryTableArray.tableArray count():%d", [categoryTableArray.tableArray count]);

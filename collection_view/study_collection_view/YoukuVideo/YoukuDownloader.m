@@ -46,7 +46,7 @@
 //方法功能：通过response的响应，判断是否连接存在
 -(void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
 {
-    NSLog(@"链接不存在");
+    //NSLog(@"链接不存在");
 }
 
 
@@ -70,7 +70,7 @@
     
     NSStringEncoding gbkEncoding =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
     NSString*string = [[NSString alloc] initWithData:receivedData encoding:gbkEncoding];
-    NSLog(@"数据请求完毕 %@",string);
+    //NSLog(@"数据请求完毕 %@",string);
     [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:NO];//关闭状态栏风火轮
     if(self.delegate){
         [delegate YoukuDownloadFinishedWithResult:receivedData];

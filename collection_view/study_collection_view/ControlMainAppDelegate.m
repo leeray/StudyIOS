@@ -7,12 +7,22 @@
 //
 
 #import "ControlMainAppDelegate.h"
+#import "PhotoCollectionViewController.h"
+#import "VideosLayout.h"
 
 @implementation ControlMainAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    
+//    self.viewController = [[PhotoCollectionViewController alloc] initWithCollectionViewLayout:[[VideosLayout alloc] init]];
+//    
+//    self.window.rootViewController = self.viewController;
+//    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 							

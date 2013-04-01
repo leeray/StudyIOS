@@ -14,10 +14,11 @@ struct TableArray{
     NSMutableArray __unsafe_unretained *tableArray;
 };
 
-@interface PhotoCollectionViewController : UICollectionViewController <UICollectionViewDelegate, YoukuGetterDelegate>{
+@interface PhotoCollectionViewController : UICollectionViewController <YoukuGetterDelegate>{
     struct TableArray categoryTableArray;
 }
 
 @property (strong, nonatomic) NSMutableArray *photoImages;
+@property (strong, nonatomic) NSMutableArray *videosArray;
 
 @end
