@@ -31,6 +31,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    //[self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:@"photoCell"];
+    
     [self loadCategoryVideo:@"电影" genre:@"恐怖"];
 }
 

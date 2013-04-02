@@ -68,8 +68,8 @@
 -(void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
     
-    NSStringEncoding gbkEncoding =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-    NSString*string = [[NSString alloc] initWithData:receivedData encoding:gbkEncoding];
+    //NSStringEncoding gbkEncoding =CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
+    //NSString*string = [[NSString alloc] initWithData:receivedData encoding:gbkEncoding];
     //NSLog(@"数据请求完毕 %@",string);
     [[UIApplication sharedApplication]setNetworkActivityIndicatorVisible:NO];//关闭状态栏风火轮
     if(self.delegate){

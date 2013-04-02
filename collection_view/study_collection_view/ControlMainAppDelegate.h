@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "PhotoCollectionViewController.h"
+#import "JASidePanelController.h"
 
 @interface ControlMainAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) PhotoCollectionViewController *viewController;
+//@property (strong, nonatomic) PhotoCollectionViewController *viewController;
+
+@property (strong, nonatomic) JASidePanelController *viewController;
 
 @end
