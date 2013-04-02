@@ -14,7 +14,6 @@
 @end
 
 @implementation PhotoCollectionViewController
-
 @synthesize videosArray;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -30,10 +29,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    //[self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:@"photoCell"];
-    
-    [self loadCategoryVideo:@"电影" genre:@"恐怖"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -65,19 +60,35 @@
     PhotoCollectionViewCell *myCell = [collectionView
                                        dequeueReusableCellWithReuseIdentifier:@"photoCell"
                                        forIndexPath:indexPath];
+    
     CategoryVideos *categoryVideo = [categoryTableArray.tableArray objectAtIndex:[indexPath row]];
     
-    
     UIImage *image;
-    image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
+    if(!imageArray){
+        imageArray = [[NSMutableArray alloc]init];
+    }
+    if([imageArray count] <= [indexPath row]){
+        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
+        [imageArray insertObject:image atIndex:[indexPath row]];
+    }else{
+        image = [imageArray objectAtIndex:[indexPath row]];
+        if(!image){
+            image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
+            [imageArray insertObject:image atIndex:[indexPath row]];
+        }
+    }
     myCell.imageView.image = image;
     
     myCell.nameLabel.numberOfLines = 0;
     myCell.nameLabel.text = [categoryVideo title];
     
-    NSLog(@"thumbnail:%@   title:%@", [categoryVideo thumbnail], [categoryVideo title]);
+    //NSLog(@"thumbnail:%@   title:%@", [categoryVideo thumbnail], [categoryVideo title]);
     
     return myCell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
 }
 
 #pragma 
@@ -104,6 +115,36 @@
     NSLog(@"categoryTableArray.tableArray count():%d", [categoryTableArray.tableArray count]);
     
     [self.collectionView reloadData];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSLog(@"%@ viewWillAppear", self);
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    NSLog(@"%@ viewDidAppear", self);
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    NSLog(@"%@ viewWillDisappear", self);
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    NSLog(@"%@ viewDidDisappear", self);
+}
+
+- (void)willMoveToParentViewController:(UIViewController *)parent {
+    [super willMoveToParentViewController:parent];
+    NSLog(@"%@ willMoveToParentViewController %@", self, parent);
+}
+
+- (void)didMoveToParentViewController:(UIViewController *)parent {
+    [super didMoveToParentViewController:parent];
+    NSLog(@"%@ didMoveToParentViewController %@", self, parent);
 }
 
 

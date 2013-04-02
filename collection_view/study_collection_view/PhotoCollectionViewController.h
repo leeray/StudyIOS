@@ -16,9 +16,12 @@ struct TableArray{
 
 @interface PhotoCollectionViewController : UICollectionViewController <YoukuGetterDelegate>{
     struct TableArray categoryTableArray;
+    NSMutableArray *imageArray;
 }
 
 @property (strong, nonatomic) NSMutableArray *photoImages;
 @property (strong, nonatomic) NSMutableArray *videosArray;
+
+-(void) loadCategoryVideo:(NSString*)category genre:(NSString*)genre;
 
 @end

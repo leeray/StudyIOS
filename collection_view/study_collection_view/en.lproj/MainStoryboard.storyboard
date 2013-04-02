@@ -7,7 +7,7 @@
         <!--Left Nav View Controller-->
         <scene sceneID="jYz-2Z-MJR">
             <objects>
-                <tableViewController id="kMp-N5-ivY" customClass="LeftNavViewController" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="leftController" id="kMp-N5-ivY" customClass="LeftNavViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ebW-rw-bMd">
                         <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oox-0F-q0m">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="160" id="QkE-jm-9VV"/>
+                                                        <constraint firstAttribute="width" constant="80" id="xgL-Qg-I31"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="热点">
@@ -39,7 +39,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="top" secondItem="BRT-lS-MfB" secondAttribute="top" type="default" id="OSX-gh-lmI"/>
+                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="top" secondItem="BRT-lS-MfB" secondAttribute="top" constant="-1" id="v78-e8-CHu"/>
                                             <constraint firstItem="Oox-0F-q0m" firstAttribute="leading" secondItem="BRT-lS-MfB" secondAttribute="leading" type="default" id="v8F-Ur-8tO"/>
                                         </constraints>
                                     </tableViewCell>
@@ -52,7 +52,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYC-wo-WhO">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="160" id="8SQ-8l-tM6"/>
+                                                        <constraint firstAttribute="width" constant="80" id="gU5-HP-3R6"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="电视剧">
@@ -67,8 +67,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="zYC-wo-WhO" firstAttribute="top" secondItem="U29-y5-sFV" secondAttribute="top" constant="-1" id="G0p-gp-eXE"/>
                                             <constraint firstItem="zYC-wo-WhO" firstAttribute="leading" secondItem="U29-y5-sFV" secondAttribute="leading" type="default" id="RTP-CH-IYz"/>
-                                            <constraint firstItem="zYC-wo-WhO" firstAttribute="top" secondItem="U29-y5-sFV" secondAttribute="top" type="default" id="gDz-3d-IRf"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Cf0-3F-9xp">
@@ -80,7 +80,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I5x-IL-NIN">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="161" id="3ti-uv-M0U"/>
+                                                        <constraint firstAttribute="width" constant="80" id="dSf-0i-nmg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="电影">
@@ -96,7 +96,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="I5x-IL-NIN" firstAttribute="leading" secondItem="Cf0-3F-9xp" secondAttribute="leading" type="default" id="37s-bF-UOS"/>
-                                            <constraint firstItem="I5x-IL-NIN" firstAttribute="top" secondItem="Cf0-3F-9xp" secondAttribute="top" type="default" id="JcG-O8-KPp"/>
+                                            <constraint firstItem="I5x-IL-NIN" firstAttribute="top" secondItem="Cf0-3F-9xp" secondAttribute="top" constant="-1" id="8Xy-dV-hCn"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ItE-9d-LU0">
@@ -108,7 +108,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ijp-gf-4tm">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="161" id="wDo-50-UFR"/>
+                                                        <constraint firstAttribute="width" constant="80" id="v6j-aQ-u2Y"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="娱乐">
@@ -123,8 +123,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Ijp-gf-4tm" firstAttribute="top" secondItem="ItE-9d-LU0" secondAttribute="top" constant="-1" id="9NU-zv-dHj"/>
                                             <constraint firstItem="Ijp-gf-4tm" firstAttribute="leading" secondItem="ItE-9d-LU0" secondAttribute="leading" type="default" id="Khu-5a-gYT"/>
-                                            <constraint firstItem="Ijp-gf-4tm" firstAttribute="top" secondItem="ItE-9d-LU0" secondAttribute="top" type="default" id="UYW-Oa-Dol"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="JS5-9h-dcN">
@@ -136,7 +136,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Kh-NQ-bCA">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="161" id="SY9-ox-3L5"/>
+                                                        <constraint firstAttribute="width" constant="80" id="rSj-u9-rNd"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="动漫">
@@ -152,7 +152,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="5Kh-NQ-bCA" firstAttribute="leading" secondItem="JS5-9h-dcN" secondAttribute="leading" type="default" id="10B-hU-dWf"/>
-                                            <constraint firstItem="5Kh-NQ-bCA" firstAttribute="top" secondItem="JS5-9h-dcN" secondAttribute="top" type="default" id="GSP-zG-D7U"/>
+                                            <constraint firstItem="5Kh-NQ-bCA" firstAttribute="top" secondItem="JS5-9h-dcN" secondAttribute="top" constant="-1" id="gh6-9H-4h1"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="bw8-us-77a">
@@ -164,7 +164,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVM-id-fIi">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="161" id="HK2-ub-2Mm"/>
+                                                        <constraint firstAttribute="width" constant="80" id="PHd-ps-cm0"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="音乐">
@@ -192,7 +192,7 @@
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37o-H1-g6p">
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="161" id="08a-Lt-Uw9"/>
+                                                        <constraint firstAttribute="width" constant="80" id="qxr-mJ-Vqr"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="搞笑">
@@ -207,8 +207,8 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="37o-H1-g6p" firstAttribute="top" secondItem="PjK-eH-mqm" secondAttribute="top" type="default" id="3H3-UY-L76"/>
                                             <constraint firstItem="37o-H1-g6p" firstAttribute="leading" secondItem="PjK-eH-mqm" secondAttribute="leading" type="default" id="EQF-bg-71m"/>
+                                            <constraint firstItem="37o-H1-g6p" firstAttribute="top" secondItem="PjK-eH-mqm" secondAttribute="top" constant="-1" id="Rr4-kO-ybu"/>
                                         </constraints>
                                     </tableViewCell>
                                 </cells>
@@ -231,7 +231,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jk-uG-hfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-126" y="-703"/>
+            <point key="canvasLocation" x="-726" y="-719"/>
         </scene>
         <!--Photo Collection View Controller-->
         <scene sceneID="lf5-3y-Ogh">
@@ -292,53 +292,9 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDO-rW-D60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="492" y="-393"/>
+            <point key="canvasLocation" x="-240" y="-719"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LeftNavViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeftNavViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="canBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="cutBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="funBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="hotBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="movBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="mucBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="tvsBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="yulBut" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="zoyBut" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="PhotoCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="imageView" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="PhotoCollectionViewController" superclassName="UICollectionViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoCollectionViewController.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-        <class className="UICollectionViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewController.h"/>
-        </class>
-        <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
-        </class>
-        <class className="UICollectionViewLayout" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

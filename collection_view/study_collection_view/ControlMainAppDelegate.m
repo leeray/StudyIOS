@@ -29,7 +29,7 @@
     
     self.viewController = [[JASidePanelController alloc] init];
     self.viewController.shouldDelegateAutorotateToVisiblePanel = YES;
-    self.viewController.leftFixedWidth = 162.0;
+    self.viewController.leftFixedWidth = 80.0;
     
 //    LeftNavViewController *leftController = [[LeftNavViewController alloc]init];
     LeftNavViewController *leftController = [board instantiateViewControllerWithIdentifier:@"leftController"];
@@ -38,6 +38,7 @@
 //    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc] initWithCollectionViewLayout:[[VideosLayout alloc] init]];
 //    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
     PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
+    [contentController loadCategoryVideo:@"热点" genre:@""];
     self.viewController.centerPanel = contentController;
     
     self.window.rootViewController = self.viewController;

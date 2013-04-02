@@ -7,6 +7,9 @@
 //
 
 #import "LeftNavViewController.h"
+#import "JASidePanelController.h"
+#import "UIViewController+JASidePanel.h"
+#import "PhotoCollectionViewController.h"
 
 @interface LeftNavViewController ()
 
@@ -21,6 +24,13 @@
 @end
 
 @implementation LeftNavViewController
+@synthesize hotBut;
+@synthesize tvsBut;
+@synthesize movBut;
+@synthesize yulBut;
+@synthesize cutBut;
+@synthesize mucBut;
+@synthesize funBut;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,12 +45,29 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [hotBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [tvsBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [movBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [yulBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [cutBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [mucBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    [funBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)_leftNavButtonOnClick:(UIButton*)but{
+    UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
+    //PhotoCollectionViewController *contentController = (PhotoCollectionViewController*)self.sidePanelController.centerPanel;
+    [contentController loadCategoryVideo:[but currentTitle] genre:@""];
+    self.sidePanelController.centerPanel = contentController;
+    
 }
 
 @end

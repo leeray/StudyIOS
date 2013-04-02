@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		234AE14E170ADFE400A9DF63 /* DetailVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234AE14D170ADFE400A9DF63 /* DetailVideoViewController.m */; };
 		23710AF81709607A008F6EA8 /* VideosLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 23710AF71709607A008F6EA8 /* VideosLayout.m */; };
 		23838E6617042A9700E1DD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6517042A9700E1DD31 /* UIKit.framework */; };
 		23838E6817042A9700E1DD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6717042A9700E1DD31 /* Foundation.framework */; };
@@ -31,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		234AE14C170ADFE400A9DF63 /* DetailVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailVideoViewController.h; path = Controller/DetailVideoViewController.h; sourceTree = "<group>"; };
+		234AE14D170ADFE400A9DF63 /* DetailVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailVideoViewController.m; path = Controller/DetailVideoViewController.m; sourceTree = "<group>"; };
 		23710AF61709607A008F6EA8 /* VideosLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosLayout.h; sourceTree = "<group>"; };
 		23710AF71709607A008F6EA8 /* VideosLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosLayout.m; sourceTree = "<group>"; };
 		23838E6217042A9700E1DD31 /* study_collection_view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = study_collection_view.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +155,8 @@
 				23710AF71709607A008F6EA8 /* VideosLayout.m */,
 				2397634E1709EB1500A7D0CB /* LeftNavViewController.h */,
 				2397634F1709EB1500A7D0CB /* LeftNavViewController.m */,
+				234AE14C170ADFE400A9DF63 /* DetailVideoViewController.h */,
+				234AE14D170ADFE400A9DF63 /* DetailVideoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 				23CDF5FE170547E000B95763 /* UIViewController+JASidePanel.m in Sources */,
 				23710AF81709607A008F6EA8 /* VideosLayout.m in Sources */,
 				239763501709EB1500A7D0CB /* LeftNavViewController.m in Sources */,
+				234AE14E170ADFE400A9DF63 /* DetailVideoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +352,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "study_collection_view/study_collection_view-Prefix.pch";
 				INFOPLIST_FILE = "study_collection_view/study_collection_view-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -357,6 +364,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "study_collection_view/study_collection_view-Prefix.pch";
 				INFOPLIST_FILE = "study_collection_view/study_collection_view-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
