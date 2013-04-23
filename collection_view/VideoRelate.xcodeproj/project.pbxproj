@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		234AE14E170ADFE400A9DF63 /* DetailVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234AE14D170ADFE400A9DF63 /* DetailVideoViewController.m */; };
+		234ECBCB17116DF500F864EA /* VideoDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 234ECBCA17116DF500F864EA /* VideoDetail.m */; };
+		234ECBD11712929500F864EA /* RelateVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 234ECBD01712929500F864EA /* RelateVideoCell.m */; };
+		234ECBD41712933000F864EA /* RelateVideoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 234ECBD31712933000F864EA /* RelateVideoLayout.m */; };
+		234ECBD71712A8E200F864EA /* RelateVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234ECBD61712A8E200F864EA /* RelateVideoViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		234ECBF71713B68A00F864EA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 234ECBF61713B68A00F864EA /* MediaPlayer.framework */; };
+		234ECBFC1716BA1800F864EA /* DetailViewPush.m in Sources */ = {isa = PBXBuildFile; fileRef = 234ECBFB1716BA1700F864EA /* DetailViewPush.m */; };
+		234ECBFF1717F68000F864EA /* CenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 234ECBFE1717F67F00F864EA /* CenterViewController.m */; };
 		23710AF81709607A008F6EA8 /* VideosLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 23710AF71709607A008F6EA8 /* VideosLayout.m */; };
 		23838E6617042A9700E1DD31 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6517042A9700E1DD31 /* UIKit.framework */; };
 		23838E6817042A9700E1DD31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23838E6717042A9700E1DD31 /* Foundation.framework */; };
@@ -34,16 +41,29 @@
 /* Begin PBXFileReference section */
 		234AE14C170ADFE400A9DF63 /* DetailVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailVideoViewController.h; path = Controller/DetailVideoViewController.h; sourceTree = "<group>"; };
 		234AE14D170ADFE400A9DF63 /* DetailVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailVideoViewController.m; path = Controller/DetailVideoViewController.m; sourceTree = "<group>"; };
+		234ECBC917116DF500F864EA /* VideoDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoDetail.h; path = YoukuVideo/VideoDetail.h; sourceTree = "<group>"; };
+		234ECBCA17116DF500F864EA /* VideoDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoDetail.m; path = YoukuVideo/VideoDetail.m; sourceTree = "<group>"; };
+		234ECBCF1712929500F864EA /* RelateVideoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RelateVideoCell.h; path = Controller/RelateVideoCell.h; sourceTree = "<group>"; };
+		234ECBD01712929500F864EA /* RelateVideoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RelateVideoCell.m; path = Controller/RelateVideoCell.m; sourceTree = "<group>"; };
+		234ECBD21712933000F864EA /* RelateVideoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RelateVideoLayout.h; path = Controller/RelateVideoLayout.h; sourceTree = "<group>"; };
+		234ECBD31712933000F864EA /* RelateVideoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RelateVideoLayout.m; path = Controller/RelateVideoLayout.m; sourceTree = "<group>"; };
+		234ECBD51712A8E200F864EA /* RelateVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RelateVideoViewController.h; path = Controller/RelateVideoViewController.h; sourceTree = "<group>"; };
+		234ECBD61712A8E200F864EA /* RelateVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RelateVideoViewController.m; path = Controller/RelateVideoViewController.m; sourceTree = "<group>"; };
+		234ECBF61713B68A00F864EA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		234ECBFA1716BA1600F864EA /* DetailViewPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewPush.h; path = Controller/DetailViewPush.h; sourceTree = "<group>"; };
+		234ECBFB1716BA1700F864EA /* DetailViewPush.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewPush.m; path = Controller/DetailViewPush.m; sourceTree = "<group>"; };
+		234ECBFD1717F67E00F864EA /* CenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CenterViewController.h; path = Controller/CenterViewController.h; sourceTree = "<group>"; };
+		234ECBFE1717F67F00F864EA /* CenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CenterViewController.m; path = Controller/CenterViewController.m; sourceTree = "<group>"; };
 		23710AF61709607A008F6EA8 /* VideosLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideosLayout.h; sourceTree = "<group>"; };
 		23710AF71709607A008F6EA8 /* VideosLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideosLayout.m; sourceTree = "<group>"; };
-		23838E6217042A9700E1DD31 /* study_collection_view.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = study_collection_view.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23838E6217042A9700E1DD31 /* VideoRelate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoRelate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23838E6517042A9700E1DD31 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		23838E6717042A9700E1DD31 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		23838E6917042A9700E1DD31 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		23838E6D17042A9700E1DD31 /* study_collection_view-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "study_collection_view-Info.plist"; sourceTree = "<group>"; };
+		23838E6D17042A9700E1DD31 /* VideoRelate-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VideoRelate-Info.plist"; sourceTree = "<group>"; };
 		23838E6F17042A9700E1DD31 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		23838E7117042A9700E1DD31 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		23838E7317042A9700E1DD31 /* study_collection_view-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "study_collection_view-Prefix.pch"; sourceTree = "<group>"; };
+		23838E7317042A9700E1DD31 /* VideoRelate-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VideoRelate-Prefix.pch"; sourceTree = "<group>"; };
 		23838E7417042A9700E1DD31 /* ControlMainAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ControlMainAppDelegate.h; sourceTree = "<group>"; };
 		23838E7517042A9700E1DD31 /* ControlMainAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ControlMainAppDelegate.m; sourceTree = "<group>"; };
 		23838E7717042A9700E1DD31 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -76,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234ECBF71713B68A00F864EA /* MediaPlayer.framework in Frameworks */,
 				23CDF60017056A3000B95763 /* QuartzCore.framework in Frameworks */,
 				23838E6617042A9700E1DD31 /* UIKit.framework in Frameworks */,
 				23838E6817042A9700E1DD31 /* Foundation.framework in Frameworks */,
@@ -98,7 +119,7 @@
 		23838E6317042A9700E1DD31 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				23838E6217042A9700E1DD31 /* study_collection_view.app */,
+				23838E6217042A9700E1DD31 /* VideoRelate.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +127,7 @@
 		23838E6417042A9700E1DD31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				234ECBF61713B68A00F864EA /* MediaPlayer.framework */,
 				23CDF5FF17056A3000B95763 /* QuartzCore.framework */,
 				23838E6517042A9700E1DD31 /* UIKit.framework */,
 				23838E6717042A9700E1DD31 /* Foundation.framework */,
@@ -133,10 +155,10 @@
 		23838E6C17042A9700E1DD31 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				23838E6D17042A9700E1DD31 /* study_collection_view-Info.plist */,
+				23838E6D17042A9700E1DD31 /* VideoRelate-Info.plist */,
 				23838E6E17042A9700E1DD31 /* InfoPlist.strings */,
 				23838E7117042A9700E1DD31 /* main.m */,
-				23838E7317042A9700E1DD31 /* study_collection_view-Prefix.pch */,
+				23838E7317042A9700E1DD31 /* VideoRelate-Prefix.pch */,
 				23838E7717042A9700E1DD31 /* Default.png */,
 				23838E7917042A9700E1DD31 /* Default@2x.png */,
 				23838E7B17042A9700E1DD31 /* Default-568h@2x.png */,
@@ -157,6 +179,16 @@
 				2397634F1709EB1500A7D0CB /* LeftNavViewController.m */,
 				234AE14C170ADFE400A9DF63 /* DetailVideoViewController.h */,
 				234AE14D170ADFE400A9DF63 /* DetailVideoViewController.m */,
+				234ECBCF1712929500F864EA /* RelateVideoCell.h */,
+				234ECBD01712929500F864EA /* RelateVideoCell.m */,
+				234ECBD21712933000F864EA /* RelateVideoLayout.h */,
+				234ECBD31712933000F864EA /* RelateVideoLayout.m */,
+				234ECBD51712A8E200F864EA /* RelateVideoViewController.h */,
+				234ECBD61712A8E200F864EA /* RelateVideoViewController.m */,
+				234ECBFA1716BA1600F864EA /* DetailViewPush.h */,
+				234ECBFB1716BA1700F864EA /* DetailViewPush.m */,
+				234ECBFD1717F67E00F864EA /* CenterViewController.h */,
+				234ECBFE1717F67F00F864EA /* CenterViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -170,6 +202,8 @@
 				23838E94170436F200E1DD31 /* YoukuGetter.m */,
 				23838E961704371500E1DD31 /* YoukuDownloader.h */,
 				23838E971704371500E1DD31 /* YoukuDownloader.m */,
+				234ECBC917116DF500F864EA /* VideoDetail.h */,
+				234ECBCA17116DF500F864EA /* VideoDetail.m */,
 			);
 			name = YoukuVideo;
 			sourceTree = "<group>";
@@ -188,9 +222,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		23838E6117042A9700E1DD31 /* study_collection_view */ = {
+		23838E6117042A9700E1DD31 /* VideoRelate */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 23838E8517042A9800E1DD31 /* Build configuration list for PBXNativeTarget "study_collection_view" */;
+			buildConfigurationList = 23838E8517042A9800E1DD31 /* Build configuration list for PBXNativeTarget "VideoRelate" */;
 			buildPhases = (
 				23838E5E17042A9700E1DD31 /* Sources */,
 				23838E5F17042A9700E1DD31 /* Frameworks */,
@@ -200,9 +234,9 @@
 			);
 			dependencies = (
 			);
-			name = study_collection_view;
+			name = VideoRelate;
 			productName = study_collection_view;
-			productReference = 23838E6217042A9700E1DD31 /* study_collection_view.app */;
+			productReference = 23838E6217042A9700E1DD31 /* VideoRelate.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +249,7 @@
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "李 瑞";
 			};
-			buildConfigurationList = 23838E5D17042A9700E1DD31 /* Build configuration list for PBXProject "study_collection_view" */;
+			buildConfigurationList = 23838E5D17042A9700E1DD31 /* Build configuration list for PBXProject "VideoRelate" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -227,7 +261,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				23838E6117042A9700E1DD31 /* study_collection_view */,
+				23838E6117042A9700E1DD31 /* VideoRelate */,
 			);
 		};
 /* End PBXProject section */
@@ -265,6 +299,12 @@
 				23710AF81709607A008F6EA8 /* VideosLayout.m in Sources */,
 				239763501709EB1500A7D0CB /* LeftNavViewController.m in Sources */,
 				234AE14E170ADFE400A9DF63 /* DetailVideoViewController.m in Sources */,
+				234ECBCB17116DF500F864EA /* VideoDetail.m in Sources */,
+				234ECBD11712929500F864EA /* RelateVideoCell.m in Sources */,
+				234ECBD41712933000F864EA /* RelateVideoLayout.m in Sources */,
+				234ECBD71712A8E200F864EA /* RelateVideoViewController.m in Sources */,
+				234ECBFC1716BA1800F864EA /* DetailViewPush.m in Sources */,
+				234ECBFF1717F68000F864EA /* CenterViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,10 +390,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "study_collection_view/study_collection_view-Prefix.pch";
-				INFOPLIST_FILE = "study_collection_view/study_collection_view-Info.plist";
+				GCC_PREFIX_HEADER = "study_collection_view/VideoRelate-Prefix.pch";
+				INFOPLIST_FILE = "study_collection_view/VideoRelate-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VideoRelate;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -362,10 +402,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "study_collection_view/study_collection_view-Prefix.pch";
-				INFOPLIST_FILE = "study_collection_view/study_collection_view-Info.plist";
+				GCC_PREFIX_HEADER = "study_collection_view/VideoRelate-Prefix.pch";
+				INFOPLIST_FILE = "study_collection_view/VideoRelate-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = VideoRelate;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -373,7 +413,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		23838E5D17042A9700E1DD31 /* Build configuration list for PBXProject "study_collection_view" */ = {
+		23838E5D17042A9700E1DD31 /* Build configuration list for PBXProject "VideoRelate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23838E8317042A9800E1DD31 /* Debug */,
@@ -382,7 +422,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		23838E8517042A9800E1DD31 /* Build configuration list for PBXNativeTarget "study_collection_view" */ = {
+		23838E8517042A9800E1DD31 /* Build configuration list for PBXNativeTarget "VideoRelate" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				23838E8617042A9800E1DD31 /* Debug */,

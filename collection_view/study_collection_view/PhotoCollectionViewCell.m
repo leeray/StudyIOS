@@ -7,6 +7,7 @@
 //
 
 #import "PhotoCollectionViewCell.h"
+#import <QuartzCore/QuartzCore.h>
 
 @implementation PhotoCollectionViewCell
 
@@ -15,6 +16,12 @@
     self = [super initWithFrame:frame];
     if (self) {
         // Initialization code
+        self.layer.borderWidth = 10.0f;
+        self.layer.borderColor = [UIColor whiteColor].CGColor;
+//        self.layer.backgroundColor = [UIColor underPageBackgroundColor];
+        self.contentView.layer.borderWidth = 10.0f;
+        self.contentView.layer.borderColor = [UIColor whiteColor].CGColor;
+        self.contentView.backgroundColor = [UIColor underPageBackgroundColor];
     }
     return self;
 }

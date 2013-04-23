@@ -14,14 +14,28 @@ struct TableArray{
     NSMutableArray __unsafe_unretained *tableArray;
 };
 
+@protocol PhotoCollectionViewControllerDelegate;
+
 @interface PhotoCollectionViewController : UICollectionViewController <YoukuGetterDelegate>{
-    struct TableArray categoryTableArray;
+    //struct TableArray categoryTableArray;
     NSMutableArray *imageArray;
 }
 
+@property (nonatomic, assign) struct TableArray categoryTableArray;
 @property (strong, nonatomic) NSMutableArray *photoImages;
 @property (strong, nonatomic) NSMutableArray *videosArray;
+@property (nonatomic, assign) NSInteger cellCount;
+
+@property (nonatomic, assign) id<PhotoCollectionViewControllerDelegate> delegate;
 
 -(void) loadCategoryVideo:(NSString*)category genre:(NSString*)genre;
+
+@end
+
+@protocol PhotoCollectionViewControllerDelegate <NSObject>
+
+@optional
+- (void) videoClick:(NSString*) vid;
+
 
 @end

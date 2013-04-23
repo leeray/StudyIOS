@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "YoukuDownloader.h"
+#import "VideoDetail.h"
 
 struct YoukuCategoryInfo{
     NSMutableArray __unsafe_unretained *youkuCategroyInfo;
@@ -21,12 +22,24 @@ struct YoukuCategoryInfo{
 @property (nonatomic, retain) NSString *flag;
 
 //根据分类获取视频 http://open.youku.com/docs/api/videos/by_category
--(void)getCategoryVideos:(NSString*)category genre:(NSString*)genre;
+- (void) getCategoryVideos:(NSString*)category genre:(NSString*)genre;
+
+- (void) getVideoDetail:(NSString*)vid;
+
+- (void) getVideoRelate:(NSString*)vid;
 
 @end
 
 @protocol YoukuGetterDelegate <NSObject>
 
--(void) getCategoryVideosOK:(struct YoukuCategoryInfo)result;
+@optional
+- (void) getCategoryVideosOK:(struct YoukuCategoryInfo)result;
+
+@optional
+- (void) getVideoDetailOK:(VideoDetail*)result;
+
+@optional
+- (void) getVideoRelateOK:(struct YoukuCategoryInfo)result;
+
 
 @end

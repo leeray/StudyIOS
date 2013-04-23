@@ -8,6 +8,8 @@
 
 #import "PhotoCollectionViewController.h"
 #import "CategoryVideos.h"
+#import "DetailVideoViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface PhotoCollectionViewController ()
 
@@ -15,6 +17,9 @@
 
 @implementation PhotoCollectionViewController
 @synthesize videosArray;
+@synthesize cellCount;
+@synthesize categoryTableArray;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +34,9 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGestrue:)];
+    [self.collectionView addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -60,24 +68,28 @@
     PhotoCollectionViewCell *myCell = [collectionView
                                        dequeueReusableCellWithReuseIdentifier:@"photoCell"
                                        forIndexPath:indexPath];
-    
+    myCell.layer.borderWidth = 1.0f;
+    myCell.layer.borderColor = [UIColor blackColor].CGColor;
     CategoryVideos *categoryVideo = [categoryTableArray.tableArray objectAtIndex:[indexPath row]];
     
-    UIImage *image;
-    if(!imageArray){
-        imageArray = [[NSMutableArray alloc]init];
-    }
-    if([imageArray count] <= [indexPath row]){
-        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
-        [imageArray insertObject:image atIndex:[indexPath row]];
-    }else{
-        image = [imageArray objectAtIndex:[indexPath row]];
-        if(!image){
-            image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
-            [imageArray insertObject:image atIndex:[indexPath row]];
-        }
-    }
-    myCell.imageView.image = image;
+//    UIImage *image;
+//    if(!imageArray){
+//        imageArray = [[NSMutableArray alloc]init];
+//    }
+//    if([imageArray count] <= [indexPath row]){
+//        image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
+//        NSLog(@"imageArray.count:%d indexPath.row:%d", [imageArray count], [indexPath row]);
+//        [imageArray insertObject:image atIndex:[indexPath row]];
+//    }else{
+//        image = [imageArray objectAtIndex:[indexPath row]];
+//        if(!image){
+//            image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
+//            [imageArray insertObject:image atIndex:[indexPath row]];
+//        }
+//    }
+//    myCell.imageView.image = image;
+    myCell.imageView.image = [imageArray objectAtIndex:[indexPath row]];
+    
     
     myCell.nameLabel.numberOfLines = 0;
     myCell.nameLabel.text = [categoryVideo title];
@@ -106,10 +118,20 @@
     if(!videosArray){
         videosArray = [[NSMutableArray alloc]init];
     }
+    if(!imageArray){
+        imageArray = [[NSMutableArray alloc]init];
+    }
+    
+    self.cellCount = 0;
     
     for (CategoryVideos *categoryVideo in result.youkuCategroyInfo){
         [categoryTableArray.tableArray addObject:categoryVideo];
         [videosArray addObject:categoryVideo];
+        
+        UIImage *image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[categoryVideo thumbnail]]]];
+        [imageArray insertObject:image atIndex:self.cellCount];
+        
+        self.cellCount++;
     }
     
     NSLog(@"categoryTableArray.tableArray count():%d", [categoryTableArray.tableArray count]);
@@ -147,5 +169,31 @@
     NSLog(@"%@ didMoveToParentViewController %@", self, parent);
 }
 
+//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+//    if ([segue.identifier isEqualToString:@"DetailVideo"]) {
+//        NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
+//        CategoryVideos *categoryVideo = [categoryTableArray.tableArray objectAtIndex:[selectedIndexPath row]];
+//        //DetailVideoViewController *detailVideoViewController = segue.destinationViewController;
+//        //[detailVideoViewController getVideoDetail:categoryVideo.vid];
+//        
+//        /*self transitionFromViewController:<#(UIViewController *)#> toViewController:<#(UIViewController *)#> duration:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
+//         */
+//    }
+//}
+
+
+- (void)handleTapGestrue:(UITapGestureRecognizer *)sender{
+    NSLog(@"PhotoCollectionViewController collectionView handleTapGesture.");
+    if (sender.state == UIGestureRecognizerStateEnded){
+        CGPoint initialPinchPoint = [sender locationInView:self.collectionView];
+        NSIndexPath* tappedCellPath = [self.collectionView indexPathForItemAtPoint:initialPinchPoint];
+        
+        if (tappedCellPath!=nil) {
+            CategoryVideos *categoryVideo = [categoryTableArray.tableArray objectAtIndex:[tappedCellPath row]];
+            [delegate videoClick:[categoryVideo vid]];
+        }
+        
+    }
+}
 
 @end

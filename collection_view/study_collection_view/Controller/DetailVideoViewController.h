@@ -7,9 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YoukuGetter.h"
+#import "RelateVideoViewController.h"
 
-@interface DetailVideoViewController : UIViewController
+@protocol DetailVideoViewControllerDelegate;
 
+@interface DetailVideoViewController : UIViewController <YoukuGetterDelegate, RelateVideoViewControllerDelegate, UIScrollViewDelegate>
+@property(nonatomic, retain) NSString *vidStr;
 @property(nonatomic, retain) UILabel *titleLabel;
+@property(nonatomic, retain) UIView *videoView;
+@property(nonatomic, retain) UIScrollView *videoInfoRelateView;
+@property(nonatomic, retain) UILabel *infoLabel;
+@property(nonatomic, retain) UILabel *relateLabel;
+@property(nonatomic, retain) UIView *scrollbar;
+@property(nonatomic, retain) UILabel *videoinfoconentLabel;
+
+@property(nonatomic, retain) RelateVideoViewController *relateVideoViewController;
+@property(nonatomic, retain) id<DetailVideoViewControllerDelegate> delegate;
+
+- (IBAction)close:(id)sender;
+
+- (void) getVideoDetail:(NSString*)vid;
 
 @end
+
+@protocol DetailVideoViewControllerDelegate <NSObject>
+
+-(void)DetailViewUnload;
+-(void) DetailViewTapGesture:(float)alphaValue;
+
+@end
+

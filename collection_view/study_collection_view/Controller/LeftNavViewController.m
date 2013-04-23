@@ -10,6 +10,7 @@
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 #import "PhotoCollectionViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LeftNavViewController ()
 
@@ -53,6 +54,14 @@
     [cutBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
     [mucBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
     [funBut addTarget:self action:@selector(_leftNavButtonOnClick:) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    hotBut.layer.borderWidth = 0.1f;
+    hotBut.layer.opaque = YES;
+    hotBut.layer.shadowColor = [UIColor blueColor].CGColor ;
+    hotBut.layer.shadowOpacity = 0.9;
+    hotBut.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
+    
 }
 
 - (void)didReceiveMemoryWarning

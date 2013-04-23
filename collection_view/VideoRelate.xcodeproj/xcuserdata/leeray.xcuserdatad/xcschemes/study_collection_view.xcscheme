@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "23838E6117042A9700E1DD31"
-               BuildableName = "study_collection_view.app"
-               BlueprintName = "study_collection_view"
-               ReferencedContainer = "container:study_collection_view.xcodeproj">
+               BuildableName = "VideoRelate.app"
+               BlueprintName = "VideoRelate"
+               ReferencedContainer = "container:VideoRelate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23838E6117042A9700E1DD31"
-            BuildableName = "study_collection_view.app"
-            BlueprintName = "study_collection_view"
-            ReferencedContainer = "container:study_collection_view.xcodeproj">
+            BuildableName = "VideoRelate.app"
+            BlueprintName = "VideoRelate"
+            ReferencedContainer = "container:VideoRelate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -52,9 +52,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23838E6117042A9700E1DD31"
-            BuildableName = "study_collection_view.app"
-            BlueprintName = "study_collection_view"
-            ReferencedContainer = "container:study_collection_view.xcodeproj">
+            BuildableName = "VideoRelate.app"
+            BlueprintName = "VideoRelate"
+            ReferencedContainer = "container:VideoRelate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -70,9 +70,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "23838E6117042A9700E1DD31"
-            BuildableName = "study_collection_view.app"
-            BlueprintName = "study_collection_view"
-            ReferencedContainer = "container:study_collection_view.xcodeproj">
+            BuildableName = "VideoRelate.app"
+            BlueprintName = "VideoRelate"
+            ReferencedContainer = "container:VideoRelate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

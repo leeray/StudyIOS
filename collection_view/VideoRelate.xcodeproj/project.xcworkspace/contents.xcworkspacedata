@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:study_collection_view.xcodeproj">
+      location = "self:VideoRelate.xcodeproj">
    </FileRef>
 </Workspace>

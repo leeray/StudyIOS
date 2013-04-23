@@ -10,6 +10,7 @@
 #import "PhotoCollectionViewController.h"
 #import "VideosLayout.h"
 #import "LeftNavViewController.h"
+#import "CenterViewController.h"
 
 @implementation ControlMainAppDelegate
 
@@ -37,9 +38,13 @@
     
 //    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc] initWithCollectionViewLayout:[[VideosLayout alloc] init]];
 //    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
-    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
-    [contentController loadCategoryVideo:@"热点" genre:@""];
-    self.viewController.centerPanel = contentController;
+
+//    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
+//    [contentController loadCategoryVideo:@"热点" genre:@""];
+//    self.viewController.centerPanel = contentController;
+    CenterViewController *centerController = [[CenterViewController alloc]init];
+    self.viewController.centerPanel = centerController;
+    
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
