@@ -20,13 +20,29 @@
     if (self) {
         // Custom initialization
     }
+    
+//    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc] initWithNibName:@"PhotoCollectionViewController" bundle:nil];
+//    [contentController loadCategoryVideo:@"热点" genre:@""];
+//    self.contentController = contentController;
+//    contentController.delegate = self;
+//    [self.view addSubview:contentController.view];
+//    [self addChildViewController:contentController];
+//    
+//    
+//    DetailVideoViewController *detailVideoViewController = [[DetailVideoViewController alloc] init];
+//    [self addChildViewController:detailVideoViewController];
+//    self.detailController = detailVideoViewController;
+//    detailVideoViewController.delegate = self;
+//    
+//    self.currentViewController = contentController;
+    
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+	
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
     PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
     [contentController loadCategoryVideo:@"热点" genre:@""];
@@ -58,51 +74,22 @@
     
     [self.detailController getVideoDetail:vid];
     
-    //self.detailController.view.frame = CGRectMake(320, 0, 320, 480);
-
-//    UIViewController *oldViewController = nil;;
-//    [self transitionFromViewController:self.currentViewController
-//                      toViewController:self.detailController
-//                              duration:0.3
-//                               options:UIViewAnimationOptionTransitionNone
-//                            animations:nil
-//                            completion:^(BOOL finished){
-//                                if (finished) {
-//                                    self.currentViewController = self.detailController;
-//                                    self.currentViewController.view.frame = CGRectMake(0, 0, 320, 480);
-//                                } else {
-//                                    self.currentViewController = oldViewController;
-//                                }
-//                            }];
-    
-    
-    
-    //[self.view addSubview:self.detailController.view];
-    
-    
     [UIView beginAnimations:@"View Flip" context:nil];
     [UIView setAnimationDuration:0.4];
     [self.view addSubview:self.detailController.view];
     self.detailController.view.frame = CGRectMake(320, 0, 320, 480);
     self.detailController.view.frame = CGRectMake(0, 0, 320, 480);
     CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-    transform = CGAffineTransformScale(transform, 0.98, 0.98);
+    transform = CGAffineTransformScale(transform, 0.90, 0.90);
     self.contentController.view.alpha = 0.5f;
     [self.contentController.view setTransform:transform];
     [UIView commitAnimations];
     
 }
 
--(void)DetailViewUnload{
+-(void) DetailViewTapGesture:(float)alphaValue Affinex:(float)sx Affiney:(float)sy{
     CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-    transform = CGAffineTransformScale(transform, 1.0, 1.0);
-    self.contentController.view.alpha = 1.0f;
-    [self.contentController.view setTransform:transform];
-}
-
--(void) DetailViewTapGesture:(float)alphaValue{
-    CGAffineTransform transform = CGAffineTransformMakeRotation(0);
-    transform = CGAffineTransformScale(transform, 1.0, 1.0);
+    transform = CGAffineTransformScale(transform, sx, sy);
     self.contentController.view.alpha = alphaValue;
     [self.contentController.view setTransform:transform];
 }

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "PhotoCollectionViewController.h"
 #import "JASidePanelController.h"
+#import "VideoRelateController.h"
 
 @interface ControlMainAppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -16,6 +17,7 @@
 
 //@property (strong, nonatomic) PhotoCollectionViewController *viewController;
 
-@property (strong, nonatomic) JASidePanelController *viewController;
+//@property (strong, nonatomic) JASidePanelController *viewController;
+@property (strong, nonatomic) VideoRelateController *viewController;
 
 @end

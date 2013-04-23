@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol LeftNavViewControllerDelegate;
+
 @interface LeftNavViewController : UITableViewController
+
+@property(strong, nonatomic) id<LeftNavViewControllerDelegate> delegate;
+
+@end
+
+@protocol LeftNavViewControllerDelegate <NSObject>
+
+-(void) leftNavButtonClick:(NSString*)category;
 
 @end

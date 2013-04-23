@@ -33,8 +33,7 @@
 
 @protocol DetailVideoViewControllerDelegate <NSObject>
 
--(void)DetailViewUnload;
--(void) DetailViewTapGesture:(float)alphaValue;
+-(void) DetailViewTapGesture:(float)alphaValue Affinex:(float)sx Affiney:(float)sy;
 
 @end
 

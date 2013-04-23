@@ -33,6 +33,7 @@
 		23838E95170436F200E1DD31 /* YoukuGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 23838E94170436F200E1DD31 /* YoukuGetter.m */; };
 		23838E981704371500E1DD31 /* YoukuDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 23838E971704371500E1DD31 /* YoukuDownloader.m */; };
 		239763501709EB1500A7D0CB /* LeftNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2397634F1709EB1500A7D0CB /* LeftNavViewController.m */; };
+		23A7A9801726911400659D9F /* VideoRelateController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23A7A97F1726911400659D9F /* VideoRelateController.m */; };
 		23CDF5FD170547E000B95763 /* JASidePanelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF5FA170547E000B95763 /* JASidePanelController.m */; };
 		23CDF5FE170547E000B95763 /* UIViewController+JASidePanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 23CDF5FC170547E000B95763 /* UIViewController+JASidePanel.m */; };
 		23CDF60017056A3000B95763 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23CDF5FF17056A3000B95763 /* QuartzCore.framework */; };
@@ -84,6 +85,8 @@
 		23838E971704371500E1DD31 /* YoukuDownloader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YoukuDownloader.m; path = YoukuVideo/YoukuDownloader.m; sourceTree = "<group>"; };
 		2397634E1709EB1500A7D0CB /* LeftNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeftNavViewController.h; path = Controller/LeftNavViewController.h; sourceTree = "<group>"; };
 		2397634F1709EB1500A7D0CB /* LeftNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeftNavViewController.m; path = Controller/LeftNavViewController.m; sourceTree = "<group>"; };
+		23A7A97E1726911400659D9F /* VideoRelateController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoRelateController.h; path = Controller/VideoRelateController.h; sourceTree = "<group>"; };
+		23A7A97F1726911400659D9F /* VideoRelateController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VideoRelateController.m; path = Controller/VideoRelateController.m; sourceTree = "<group>"; };
 		23CDF5F9170547E000B95763 /* JASidePanelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JASidePanelController.h; path = JASidePanels/JASidePanelController.h; sourceTree = "<group>"; };
 		23CDF5FA170547E000B95763 /* JASidePanelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JASidePanelController.m; path = JASidePanels/JASidePanelController.m; sourceTree = "<group>"; };
 		23CDF5FB170547E000B95763 /* UIViewController+JASidePanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+JASidePanel.h"; path = "JASidePanels/UIViewController+JASidePanel.h"; sourceTree = "<group>"; };
@@ -189,6 +192,8 @@
 				234ECBFB1716BA1700F864EA /* DetailViewPush.m */,
 				234ECBFD1717F67E00F864EA /* CenterViewController.h */,
 				234ECBFE1717F67F00F864EA /* CenterViewController.m */,
+				23A7A97E1726911400659D9F /* VideoRelateController.h */,
+				23A7A97F1726911400659D9F /* VideoRelateController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 				234ECBD71712A8E200F864EA /* RelateVideoViewController.m in Sources */,
 				234ECBFC1716BA1800F864EA /* DetailViewPush.m in Sources */,
 				234ECBFF1717F68000F864EA /* CenterViewController.m in Sources */,
+				23A7A9801726911400659D9F /* VideoRelateController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +361,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -379,7 +385,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -392,7 +398,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "study_collection_view/VideoRelate-Prefix.pch";
 				INFOPLIST_FILE = "study_collection_view/VideoRelate-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = VideoRelate;
 				WRAPPER_EXTENSION = app;
 			};
@@ -404,7 +410,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "study_collection_view/VideoRelate-Prefix.pch";
 				INFOPLIST_FILE = "study_collection_view/VideoRelate-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = VideoRelate;
 				WRAPPER_EXTENSION = app;
 			};

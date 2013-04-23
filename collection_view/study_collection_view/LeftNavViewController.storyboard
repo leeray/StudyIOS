@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dEZ-q5-71G">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+    </dependencies>
+    <scenes>
+        <!--Left Nav View Controller-->
+        <scene sceneID="1IQ-9Z-cW5">
+            <objects>
+                <tableViewController storyboardIdentifier="leftController" id="dEZ-q5-71G" customClass="LeftNavViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" alpha="0.89999997615814209" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="YKc-eM-5DA">
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="zfw-dV-1c3">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="ELI-CW-rVv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEv-YN-7u6">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Bf9-E5-VsC"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="热点">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="tEv-YN-7u6" firstAttribute="top" secondItem="ELI-CW-rVv" secondAttribute="top" type="default" id="AKP-1B-as5"/>
+                                            <constraint firstItem="tEv-YN-7u6" firstAttribute="leading" secondItem="ELI-CW-rVv" secondAttribute="leading" type="default" id="Sgd-TF-3I9"/>
+                                            <constraint firstItem="tEv-YN-7u6" firstAttribute="bottom" secondItem="ELI-CW-rVv" secondAttribute="bottom" type="default" id="u1M-cn-NQM"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="DBT-Vs-vQX">
+                                        <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fjs-Sb-W08">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="yFl-mQ-cz0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                                    <state key="normal" title="电视剧">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Fjs-Sb-W08" firstAttribute="leading" secondItem="DBT-Vs-vQX" secondAttribute="leading" type="default" id="GyH-MY-eBL"/>
+                                            <constraint firstItem="Fjs-Sb-W08" firstAttribute="top" secondItem="DBT-Vs-vQX" secondAttribute="top" type="default" id="aMd-Cu-W8F"/>
+                                            <constraint firstItem="Fjs-Sb-W08" firstAttribute="bottom" secondItem="DBT-Vs-vQX" secondAttribute="bottom" type="default" id="hUW-0C-ygU"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="adv-QR-wTw">
+                                        <rect key="frame" x="0.0" y="88" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2P-91-c5v">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="w8F-AM-77k"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="15"/>
+                                                    <state key="normal" title="电影">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="q2P-91-c5v" firstAttribute="leading" secondItem="adv-QR-wTw" secondAttribute="leading" type="default" id="NTu-X2-kTj"/>
+                                            <constraint firstItem="q2P-91-c5v" firstAttribute="top" secondItem="adv-QR-wTw" secondAttribute="top" type="default" id="OON-j4-yPX"/>
+                                            <constraint firstItem="q2P-91-c5v" firstAttribute="bottom" secondItem="adv-QR-wTw" secondAttribute="bottom" type="default" id="aza-DT-r1B"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="zUF-HT-TKh">
+                                        <rect key="frame" x="0.0" y="132" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIZ-zB-pT1">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="URZ-oc-DkM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="娱乐">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="HIZ-zB-pT1" firstAttribute="leading" secondItem="zUF-HT-TKh" secondAttribute="leading" type="default" id="9Fg-vv-4eZ"/>
+                                            <constraint firstItem="HIZ-zB-pT1" firstAttribute="bottom" secondItem="zUF-HT-TKh" secondAttribute="bottom" type="default" id="HhS-cD-4EZ"/>
+                                            <constraint firstItem="HIZ-zB-pT1" firstAttribute="top" secondItem="zUF-HT-TKh" secondAttribute="top" type="default" id="Pui-08-UeF"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="hgN-cV-5dc">
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl1-ZB-Pye">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="8qw-Dk-Veq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="动漫">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="gl1-ZB-Pye" firstAttribute="leading" secondItem="hgN-cV-5dc" secondAttribute="leading" type="default" id="C66-LD-HZP"/>
+                                            <constraint firstItem="gl1-ZB-Pye" firstAttribute="bottom" secondItem="hgN-cV-5dc" secondAttribute="bottom" type="default" id="Gh0-9s-czl"/>
+                                            <constraint firstItem="gl1-ZB-Pye" firstAttribute="top" secondItem="hgN-cV-5dc" secondAttribute="top" type="default" id="pEL-G6-th9"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="LKu-4A-BHI">
+                                        <rect key="frame" x="0.0" y="220" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yFZ-ni-AI5">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Jcn-eB-Une"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="音乐">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="yFZ-ni-AI5" firstAttribute="leading" secondItem="LKu-4A-BHI" secondAttribute="leading" type="default" id="1TG-X9-Krr"/>
+                                            <constraint firstItem="yFZ-ni-AI5" firstAttribute="bottom" secondItem="LKu-4A-BHI" secondAttribute="bottom" type="default" id="e2M-gS-Ujt"/>
+                                            <constraint firstItem="yFZ-ni-AI5" firstAttribute="top" secondItem="LKu-4A-BHI" secondAttribute="top" type="default" id="kTe-g2-YcL"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="TVa-B9-gqD">
+                                        <rect key="frame" x="0.0" y="264" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BMM-sn-GWF">
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="hhD-bc-2Ba"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="搞笑">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="BMM-sn-GWF" firstAttribute="bottom" secondItem="TVa-B9-gqD" secondAttribute="bottom" type="default" id="JSm-5e-xga"/>
+                                            <constraint firstItem="BMM-sn-GWF" firstAttribute="top" secondItem="TVa-B9-gqD" secondAttribute="top" type="default" id="R0m-ci-0Kl"/>
+                                            <constraint firstItem="BMM-sn-GWF" firstAttribute="leading" secondItem="TVa-B9-gqD" secondAttribute="leading" type="default" id="hEF-im-yfu"/>
+                                        </constraints>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="dEZ-q5-71G" id="mco-ff-mbV"/>
+                            <outlet property="delegate" destination="dEZ-q5-71G" id="wNT-OM-9t3"/>
+                        </connections>
+                    </tableView>
+                    <connections>
+                        <outlet property="cutBut" destination="gl1-ZB-Pye" id="Hlw-PP-Bgl"/>
+                        <outlet property="funBut" destination="BMM-sn-GWF" id="d18-ya-Ox2"/>
+                        <outlet property="hotBut" destination="tEv-YN-7u6" id="LHz-lg-BeM"/>
+                        <outlet property="movBut" destination="q2P-91-c5v" id="1L0-aR-HM1"/>
+                        <outlet property="mucBut" destination="yFZ-ni-AI5" id="hFx-WF-xLB"/>
+                        <outlet property="tvsBut" destination="Fjs-Sb-W08" id="KSn-e7-xBg"/>
+                        <outlet property="yulBut" destination="HIZ-zB-pT1" id="6qu-W3-tmY"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNV-cu-sfm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-726" y="-719"/>
+        </scene>
+    </scenes>
+    <classes>
+        <class className="LeftNavViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LeftNavViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="cutBut" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="funBut" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="hotBut" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="movBut" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="mucBut" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="tvsBut" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="yulBut" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

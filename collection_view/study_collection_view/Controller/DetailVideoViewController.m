@@ -290,8 +290,11 @@
         } else {
             if (translate.x > _locationBeforePan.x) {
                 self.view.frame = CGRectMake(translate.x, 0, self.view.frame.size.width, self.view.frame.size.height);
-                float alphaValue = translate.x / 100;
+                float alphaValue1 = (translate.x / 320 + 1) * 0.5;
+                NSLog(@"moving translate.x:%f  alphaValue:%f  sx:%f  sy:%f", translate.x, alphaValue1, 0.9+alphaValue1*0.1, 0.9+alphaValue1*0.1);
+                [delegate DetailViewTapGesture:alphaValue1 Affinex:0.9+alphaValue1*0.1 Affiney:0.9+alphaValue1*0.1];
             }
+            
         }
         
         
@@ -307,7 +310,7 @@
     CGFloat duration = [self _calculatedDuration];
     [UIView animateWithDuration:duration delay:0.0f options:UIViewAnimationOptionCurveLinear|UIViewAnimationOptionLayoutSubviews animations:^{
         self.view.frame = _centerPanelRestingFrame;
-        [delegate DetailViewUnload];
+        [delegate DetailViewTapGesture:1.0 Affinex:1.0 Affiney:1.0];
     } completion:^(BOOL finished) {
         if (shouldBounce) {
             // make sure correct panel is displayed under the bounce

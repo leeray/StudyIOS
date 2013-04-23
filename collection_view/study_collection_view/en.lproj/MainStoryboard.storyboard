@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="qGB-ax-Nun">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="AW1-Hs-i3O">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -39,9 +39,9 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="leading" secondItem="BRT-lS-MfB" secondAttribute="leading" type="default" id="QAN-4f-LXu"/>
-                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="top" secondItem="BRT-lS-MfB" secondAttribute="top" type="default" id="dfP-Jh-Cb7"/>
-                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="bottom" secondItem="BRT-lS-MfB" secondAttribute="bottom" type="default" id="nKN-1Y-RzH"/>
+                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="leading" secondItem="BRT-lS-MfB" secondAttribute="leading" constant="10" id="09L-Qg-CpF"/>
+                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="top" secondItem="BRT-lS-MfB" secondAttribute="top" type="default" id="ARY-Aa-ZpP"/>
+                                            <constraint firstItem="Oox-0F-q0m" firstAttribute="bottom" secondItem="BRT-lS-MfB" secondAttribute="bottom" type="default" id="gRS-AU-Xvh"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="U29-y5-sFV">
@@ -68,7 +68,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="zYC-wo-WhO" firstAttribute="leading" secondItem="U29-y5-sFV" secondAttribute="leading" type="default" id="Dda-cy-gIL"/>
+                                            <constraint firstItem="zYC-wo-WhO" firstAttribute="leading" secondItem="U29-y5-sFV" secondAttribute="leading" constant="10" id="6vq-B6-Xdr"/>
                                             <constraint firstItem="zYC-wo-WhO" firstAttribute="top" secondItem="U29-y5-sFV" secondAttribute="top" type="default" id="prK-7Q-vw6"/>
                                             <constraint firstItem="zYC-wo-WhO" firstAttribute="bottom" secondItem="U29-y5-sFV" secondAttribute="bottom" type="default" id="wg2-yC-OCX"/>
                                         </constraints>
@@ -97,7 +97,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="I5x-IL-NIN" firstAttribute="leading" secondItem="Cf0-3F-9xp" secondAttribute="leading" type="default" id="cHL-ZV-tqR"/>
+                                            <constraint firstItem="I5x-IL-NIN" firstAttribute="leading" secondItem="Cf0-3F-9xp" secondAttribute="leading" constant="10" id="B41-5x-OOK"/>
                                             <constraint firstItem="I5x-IL-NIN" firstAttribute="top" secondItem="Cf0-3F-9xp" secondAttribute="top" type="default" id="jJE-b7-yfz"/>
                                             <constraint firstItem="I5x-IL-NIN" firstAttribute="bottom" secondItem="Cf0-3F-9xp" secondAttribute="bottom" type="default" id="tBm-1y-tGO"/>
                                         </constraints>
@@ -126,7 +126,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Ijp-gf-4tm" firstAttribute="leading" secondItem="ItE-9d-LU0" secondAttribute="leading" type="default" id="D5j-Bn-Ybv"/>
+                                            <constraint firstItem="Ijp-gf-4tm" firstAttribute="leading" secondItem="ItE-9d-LU0" secondAttribute="leading" constant="10" id="7e6-Z8-ywf"/>
                                             <constraint firstItem="Ijp-gf-4tm" firstAttribute="bottom" secondItem="ItE-9d-LU0" secondAttribute="bottom" type="default" id="Odl-Va-bxe"/>
                                             <constraint firstItem="Ijp-gf-4tm" firstAttribute="top" secondItem="ItE-9d-LU0" secondAttribute="top" type="default" id="b5n-xe-Ib9"/>
                                         </constraints>
@@ -156,7 +156,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstItem="5Kh-NQ-bCA" firstAttribute="bottom" secondItem="JS5-9h-dcN" secondAttribute="bottom" type="default" id="8I8-JI-Mr5"/>
-                                            <constraint firstItem="5Kh-NQ-bCA" firstAttribute="leading" secondItem="JS5-9h-dcN" secondAttribute="leading" type="default" id="DvP-qd-x7X"/>
+                                            <constraint firstItem="5Kh-NQ-bCA" firstAttribute="leading" secondItem="JS5-9h-dcN" secondAttribute="leading" constant="10" id="NOS-Ug-6nd"/>
                                             <constraint firstItem="5Kh-NQ-bCA" firstAttribute="top" secondItem="JS5-9h-dcN" secondAttribute="top" type="default" id="vqy-9h-wUO"/>
                                         </constraints>
                                     </tableViewCell>
@@ -186,7 +186,7 @@
                                         <constraints>
                                             <constraint firstItem="TVM-id-fIi" firstAttribute="bottom" secondItem="bw8-us-77a" secondAttribute="bottom" type="default" id="96F-jg-mQc"/>
                                             <constraint firstItem="TVM-id-fIi" firstAttribute="top" secondItem="bw8-us-77a" secondAttribute="top" type="default" id="MfI-HC-YhS"/>
-                                            <constraint firstItem="TVM-id-fIi" firstAttribute="leading" secondItem="bw8-us-77a" secondAttribute="leading" type="default" id="vOk-2h-YWx"/>
+                                            <constraint firstItem="TVM-id-fIi" firstAttribute="leading" secondItem="bw8-us-77a" secondAttribute="leading" constant="10" id="afF-VG-yhR"/>
                                         </constraints>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="PjK-eH-mqm">
@@ -213,7 +213,7 @@
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="37o-H1-g6p" firstAttribute="leading" secondItem="PjK-eH-mqm" secondAttribute="leading" type="default" id="Kod-YI-esQ"/>
+                                            <constraint firstItem="37o-H1-g6p" firstAttribute="leading" secondItem="PjK-eH-mqm" secondAttribute="leading" constant="10" id="GU8-KL-R7N"/>
                                             <constraint firstItem="37o-H1-g6p" firstAttribute="bottom" secondItem="PjK-eH-mqm" secondAttribute="bottom" type="default" id="fmm-Zt-Oyd"/>
                                             <constraint firstItem="37o-H1-g6p" firstAttribute="top" secondItem="PjK-eH-mqm" secondAttribute="top" type="default" id="zyp-Dn-5T6"/>
                                         </constraints>
@@ -238,14 +238,14 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jk-uG-hfi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-726" y="-719"/>
+            <point key="canvasLocation" x="-774" y="-1091"/>
         </scene>
         <!--Photo Collection View Controller-->
         <scene sceneID="lf5-3y-Ogh">
             <objects>
-                <collectionViewController storyboardIdentifier="contentController" autoresizesArchivedViewToFullSize="NO" clearsSelectionOnViewWillAppear="NO" id="qGB-ax-Nun" customClass="PhotoCollectionViewController" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="contentController" wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" clearsSelectionOnViewWillAppear="NO" id="qGB-ax-Nun" customClass="PhotoCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="mZm-jd-djz">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <collectionViewLayout key="collectionViewLayout" id="Tru-ox-nVv" customClass="VideosLayout"/>
                         <cells>
@@ -294,10 +294,30 @@
                             <outlet property="delegate" destination="qGB-ax-Nun" id="CeW-sC-1l6"/>
                         </connections>
                     </collectionView>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oDO-rW-D60" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-240" y="-719"/>
+            <point key="canvasLocation" x="-268" y="-1083"/>
+        </scene>
+        <!--Video Relate Controller-->
+        <scene sceneID="YwQ-dz-eWV">
+            <objects>
+                <viewController wantsFullScreenLayout="YES" hidesBottomBarWhenPushed="YES" id="AW1-Hs-i3O" customClass="VideoRelateController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oJP-yY-GhX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qhe-tg-OR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1231" y="-1083"/>
         </scene>
         <!--Detail Video View Controller-->
         <scene sceneID="UT3-En-0GP">
@@ -329,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RWp-TN-pyt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="200" y="-719"/>
+            <point key="canvasLocation" x="212" y="-1083"/>
         </scene>
     </scenes>
     <classes>
@@ -378,6 +398,9 @@
         </class>
         <class className="UICollectionViewLayout" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
+        </class>
+        <class className="VideoRelateController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/VideoRelateController.h"/>
         </class>
         <class className="VideosLayout" superclassName="UICollectionViewFlowLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/VideosLayout.h"/>

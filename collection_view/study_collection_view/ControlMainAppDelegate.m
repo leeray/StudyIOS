@@ -11,42 +11,29 @@
 #import "VideosLayout.h"
 #import "LeftNavViewController.h"
 #import "CenterViewController.h"
+#import "VideoRelateController.h"
 
 @implementation ControlMainAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
     
-//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//
+//    self.viewController = [[JASidePanelController alloc] init];
+//    self.viewController.shouldDelegateAutorotateToVisiblePanel = YES;
+//    self.viewController.leftFixedWidth = 80.0;
 //    
-//    self.viewController = [[PhotoCollectionViewController alloc] initWithCollectionViewLayout:[[VideosLayout alloc] init]];
+//    LeftNavViewController *leftController = [board instantiateViewControllerWithIdentifier:@"leftController"];
+//    //LeftNavViewController *leftController = [[LeftNavViewController alloc]initWithNibName:@"LeftNavViewController" bundle:nil];
+//    self.viewController.leftPanel = leftController;
 //    
-//    self.window.rootViewController = self.viewController;
-//    [self.window makeKeyAndVisible];
-    
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    
-    
-    self.viewController = [[JASidePanelController alloc] init];
-    self.viewController.shouldDelegateAutorotateToVisiblePanel = YES;
-    self.viewController.leftFixedWidth = 80.0;
-    
-//    LeftNavViewController *leftController = [[LeftNavViewController alloc]init];
-    LeftNavViewController *leftController = [board instantiateViewControllerWithIdentifier:@"leftController"];
-    self.viewController.leftPanel = leftController;
-    
-//    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc] initWithCollectionViewLayout:[[VideosLayout alloc] init]];
-//    PhotoCollectionViewController *contentController = [[PhotoCollectionViewController alloc]initWithCollectionViewLayout:[[UICollectionViewFlowLayout alloc]init]];
+//    //CenterViewController *centerController = [[CenterViewController alloc]initWithNibName:@"PhotoCollectionViewController" bundle:nil];
+//    CenterViewController *centerController = [[CenterViewController alloc]init];
+//    self.viewController.centerPanel = centerController;
 
-//    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
-//    [contentController loadCategoryVideo:@"热点" genre:@""];
-//    self.viewController.centerPanel = contentController;
-    CenterViewController *centerController = [[CenterViewController alloc]init];
-    self.viewController.centerPanel = centerController;
-    
-    
-    self.window.rootViewController = self.viewController;
+    //self.viewController  = [[VideoRelateController alloc]init];
+    //self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     
     return YES;

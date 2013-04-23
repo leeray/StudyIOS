@@ -169,19 +169,6 @@
     NSLog(@"%@ didMoveToParentViewController %@", self, parent);
 }
 
-//- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//    if ([segue.identifier isEqualToString:@"DetailVideo"]) {
-//        NSIndexPath *selectedIndexPath = [[self.collectionView indexPathsForSelectedItems] objectAtIndex:0];
-//        CategoryVideos *categoryVideo = [categoryTableArray.tableArray objectAtIndex:[selectedIndexPath row]];
-//        //DetailVideoViewController *detailVideoViewController = segue.destinationViewController;
-//        //[detailVideoViewController getVideoDetail:categoryVideo.vid];
-//        
-//        /*self transitionFromViewController:<#(UIViewController *)#> toViewController:<#(UIViewController *)#> duration:<#(NSTimeInterval)#> options:<#(UIViewAnimationOptions)#> animations:<#^(void)animations#> completion:<#^(BOOL finished)completion#>
-//         */
-//    }
-//}
-
-
 - (void)handleTapGestrue:(UITapGestureRecognizer *)sender{
     NSLog(@"PhotoCollectionViewController collectionView handleTapGesture.");
     if (sender.state == UIGestureRecognizerStateEnded){
