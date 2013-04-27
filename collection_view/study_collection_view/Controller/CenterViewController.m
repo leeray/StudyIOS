@@ -13,6 +13,8 @@
 @end
 
 @implementation CenterViewController
+@synthesize contentController;
+@synthesize detailController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -44,12 +46,12 @@
     [super viewDidLoad];
 	
     UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
-    [contentController loadCategoryVideo:@"热点" genre:@""];
-    self.contentController = contentController;
-    contentController.delegate = self;
-    [self.view addSubview:contentController.view];
-    [self addChildViewController:contentController];
+    PhotoCollectionViewController *contentController1 = [board instantiateViewControllerWithIdentifier:@"contentController"];
+    [contentController1 loadCategoryVideo:@"热点" genre:@""];
+    contentController = contentController1;
+    contentController1.delegate = self;
+    [self.view addSubview:contentController1.view];
+    [self addChildViewController:contentController1];
     
     
     DetailVideoViewController *detailVideoViewController = [[DetailVideoViewController alloc] init];
@@ -58,7 +60,7 @@
     detailVideoViewController.delegate = self;
     NSLog(@"detailVideoViewController_1: %@", detailVideoViewController);
     
-    self.currentViewController = contentController;
+    self.currentViewController = contentController1;
 }
 
 - (void)didReceiveMemoryWarning
@@ -92,6 +94,12 @@
     transform = CGAffineTransformScale(transform, sx, sy);
     self.contentController.view.alpha = alphaValue;
     [self.contentController.view setTransform:transform];
+}
+
+- (void)leftNavButtonClick:(NSString*)category{
+    NSLog(@"CenterViewController leftNavButtonClick:%@", category);
+    [contentController loadCategoryVideo:category genre:@""];
+    self.contentController.view.frame = CGRectMake(0, 0, self.contentController.view.frame.size.width, self.contentController.view.frame.size.height);
 }
 
 @end

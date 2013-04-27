@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PhotoCollectionViewController.h"
 #import "JASidePanelController.h"
+#import "CenterViewController.h"
+#import "LeftNavViewController.h"
 
-@interface VideoRelateController : UIViewController
+@interface VideoRelateController : UIViewController <LeftNavViewControllerDelegate>{
+    UIView *tagView;
+}
 
 @property (strong, nonatomic) JASidePanelController *viewController;
+@property (strong, nonatomic) CenterViewController *centerViewController;
+@property (strong, nonatomic) LeftNavViewController *leftViewController;
 
 @end

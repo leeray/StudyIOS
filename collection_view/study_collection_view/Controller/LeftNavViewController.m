@@ -32,6 +32,7 @@
 @synthesize cutBut;
 @synthesize mucBut;
 @synthesize funBut;
+@synthesize delegate;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -62,6 +63,9 @@
     hotBut.layer.shadowOpacity = 0.9;
     hotBut.layer.shadowOffset = CGSizeMake(0.0f, 3.0f);
     
+    
+    hotBut.backgroundColor = [UIColor blueColor];
+    lastButton = hotBut;
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,11 +75,20 @@
 }
 
 -(void)_leftNavButtonOnClick:(UIButton*)but{
-    UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
-    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
-    //PhotoCollectionViewController *contentController = (PhotoCollectionViewController*)self.sidePanelController.centerPanel;
-    [contentController loadCategoryVideo:[but currentTitle] genre:@""];
-    self.sidePanelController.centerPanel = contentController;
+//    UIStoryboard *board = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+//    PhotoCollectionViewController *contentController = [board instantiateViewControllerWithIdentifier:@"contentController"];
+//    [contentController loadCategoryVideo:[but currentTitle] genre:@""];
+//    self.sidePanelController.centerPanel = contentController;
+    [delegate leftNavButtonClick:[but currentTitle]];
+    [delegate leftNavClickOnButton:but];
+    
+    [but setBackgroundColor:[UIColor blueColor]];
+    
+    NSLog(@"LeftNavViewController Button Position x:%f y:%f", but.frame.origin.x, but.bounds.origin.y);
+    
+    [lastButton setBackgroundColor:[UIColor clearColor]];
+    
+    lastButton = but;
     
 }
 

@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "PhotoCollectionViewController.h"
 #import "DetailVideoViewController.h"
+#import "LeftNavViewController.h"
 
-@interface CenterViewController : UIViewController <PhotoCollectionViewControllerDelegate, DetailVideoViewControllerDelegate>
+@interface CenterViewController : UIViewController <PhotoCollectionViewControllerDelegate, DetailVideoViewControllerDelegate, LeftNavViewControllerDelegate>
 
 @property(nonatomic, strong) PhotoCollectionViewController *contentController;
 @property(nonatomic, strong) DetailVideoViewController *detailController;

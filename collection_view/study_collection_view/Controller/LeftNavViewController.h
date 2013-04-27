@@ -10,7 +10,9 @@
 
 @protocol LeftNavViewControllerDelegate;
 
-@interface LeftNavViewController : UITableViewController
+@interface LeftNavViewController : UITableViewController{
+    UIButton *lastButton;
+}
 
 @property(strong, nonatomic) id<LeftNavViewControllerDelegate> delegate;
 
@@ -18,6 +20,7 @@
 
 @protocol LeftNavViewControllerDelegate <NSObject>
 
--(void) leftNavButtonClick:(NSString*)category;
+- (void)leftNavButtonClick:(NSString*)category;
+- (void)leftNavClickOnButton:(UIButton*)button;
 
 @end
